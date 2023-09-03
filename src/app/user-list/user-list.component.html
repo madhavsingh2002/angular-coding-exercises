@@ -1,24 +1,26 @@
 <p>user-list works!</p>
 <div>
     <h2>User List</h2>
-    <div *ngIf="loading">Loading...</div>
-    <div *ngIf="error">{{ error }}</div>
+    <div *ngIf="loading" >Loading...</div>
+    <div *ngIf="error">{{error}}</div>
     <table *ngIf="!loading && !error">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Company</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of users">
-          <td>{{ user.name }}</td>
-          <td>{{ user.email }}</td>
-          <td>{{ user.phone }}</td>
-          <td>{{ user.company.name }}</td>
-        </tr>
-      </tbody>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Companys</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.name}} </td>
+                <td>{{user.email}} </td>
+                <td>{{user.phone}} </td>
+                <td>{{user.company.name}} </td>
+                <td>{{user.website}} </td>
+            </tr>
+        </tbody>
     </table>
   </div>

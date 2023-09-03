@@ -8,12 +8,9 @@ import { catchError } from 'rxjs/operators';
 })
 export class UserService {
   private apiUrl = 'https://jsonplaceholder.typicode.com/users';
-
   constructor(private http: HttpClient) {}
-
   getUsers(): Observable<any[]> {
-    return this.http
-      .get<any[]>(this.apiUrl)
-      .pipe(catchError((error: any) => throwError(error)));
+    return this.http.get<any []>(this.apiUrl)
+    .pipe(catchError((error:any)=>throwError(error)));
   }
 }

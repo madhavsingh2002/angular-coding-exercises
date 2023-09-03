@@ -8,22 +8,20 @@ import { UserService } from '../user.service';
   
 })
 export class UserListComponent implements OnInit {
-  users: any[] = [];
-  loading: boolean = true;
-  error: string | null = null;
-
-  constructor(private userService: UserService) {}
-
-  ngOnInit() {
-    this.userService.getUsers().subscribe(
-      (data) => {
+    users:any[] = [];
+    loading:boolean = true;
+    error:string |null = null;
+    constructor(private userService: UserService){}
+    ngOnInit() {
+      this.userService.getUsers().subscribe((data)=>{
         this.users = data;
+        
         this.loading = false;
-      },
-      (error) => {
-        this.error = 'An error occurred while fetching users.';
+      },(error)=>{
+        this.error='while loading user list';
         this.loading = false;
       }
-    );
-  }
+      
+      )
+    }
 }
