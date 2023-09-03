@@ -8,38 +8,31 @@ import { DataService } from '../data.service';
 })
 export class TodoListComponent {
   todos: any[];
-  newTodo: string = '';
-
-  constructor(private dataService: DataService) {
-    this.todos = dataService.getTodos();
+  newTodo:string = '';
+  constructor(private dataService:DataService){
+    this.todos = dataService.getTodos()
   }
-
-  addTodo() {
-    if (this.newTodo.trim() !== '') {
+  // ADD TODO
+  addTodo(){
+    if(this.newTodo.trim()!==''){
       this.dataService.addTodo(this.newTodo);
-      this.newTodo = '';
+      this.newTodo = ''
     }
   }
-
-  updateTodoText(todo: any) {
-    // Only allow updating if the todo is not completed and not in update mode
-    if (!todo.completed && !todo.isUpdating) {
+  updateTodoText(todo:any){
+    if(!todo.completed && !todo.isUpdating){
       todo.isUpdating = true;
     }
+    
   }
-
-  saveTodoText(todo: any) {
-    // Save the updated text and exit update mode when input loses focus
+  saveTodoText(todo:any){
     todo.isUpdating = false;
-    this.dataService.updateTodo(todo.id, todo.text);
+    this.dataService.updateTodo(todo.id,todo.text)
   }
-
-  toggleUpdateMode(todo: any) {
-    // Toggle update mode when the "Update" button is clicked
+  toggleUpdateMode(todo:any){
     todo.isUpdating = !todo.isUpdating;
   }
-
-  deleteTodo(id: number) {
-    this.dataService.deleteTodo(id);
+  deleteTodo(id:number){
+    this.dataService.deleteTodo(id)
   }
 }
