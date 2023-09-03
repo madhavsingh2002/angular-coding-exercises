@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { AppHighlightDirective } from './app-highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     TodoListComponent,
-    UserListComponent
+    UserListComponent,
+    AppHighlightDirective
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule
