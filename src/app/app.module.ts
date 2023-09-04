@@ -9,6 +9,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { AppHighlightDirective } from './app-highlight.directive';
 import { TimerComponent } from './timer/timer.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { Counter7Component } from './counter7/counter7.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { TimerComponent } from './timer/timer.component';
     TodoListComponent,
     UserListComponent,
     AppHighlightDirective,
-    TimerComponent
+    TimerComponent,
+    AccordionComponent,
+    Counter7Component
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule

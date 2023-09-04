@@ -1,0 +1,12 @@
+<p>counter7 works!</p>
+<div>
+    <h2>Counter</h2>
+    <p>Current Value: {{ counter }}</p>
+    <button (click)="increment()">Increment</button>
+    <button (click)="decrement()">Decrement</button>
+ 
+    <input type="text" [(ngModel)]="customValue" (input)="validateInput()" />
+    <button (click)="setCustomValue()">Set Custom Value</button>
+    <p *ngIf="error" class="error">{{ error }}</p>
+  </div>
+  

@@ -2,9 +2,22 @@
 <app-counter></app-counter>
 <app-todo-list></app-todo-list>
 <app-user-list></app-user-list>
-<hr>
+<hr />
 <h3>Question-4 : Custom-Directive</h3>
 <div appHighlight="yellow">Hover over me to highlight</div>
 <!-- Question-5 -->
+<hr />
+<app-timer [duration]="5"></app-timer>
+<hr />
+<!-- Question-6 -->
+<div class="container">
+  <h3>Question-6</h3>
+  <app-accordion [sections]="accordionSections"></app-accordion>
+</div>
+<!-- Question-7 -->
 <hr>
-<app-timer [duration]="10"></app-timer>
+<div class="container">
+  <h3>Question-7</h3>
+  <h1>Counter Example</h1>
+  <app-counter7></app-counter7>
+</div>
